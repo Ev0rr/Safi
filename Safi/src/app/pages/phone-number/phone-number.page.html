@@ -1,0 +1,22 @@
+<ion-content class="phone-number">
+    <div class="container">
+      <img src="assets/logo2.svg" alt="Logo" class="logo" />
+      
+      <h1>Enter your phone number</h1>
+      <p class="subtitle">to receive a verification code</p>
+  
+      <div class="input-box">
+        <div class="country-selector">
+          <span>{{ country }}</span>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+  
+        <div class="phone-input">
+          <span>{{ countryCode }}</span>
+          <input type="tel" placeholder="your phone number" [(ngModel)]="phoneNumber" />
+        </div>
+      </div>
+      <ion-button class="bottom-button" expand="block" [disabled]="!phoneNumber" routerLink="/verify-code">Next</ion-button>
+    </div>
+  </ion-content>
+  

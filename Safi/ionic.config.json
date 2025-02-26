@@ -1,0 +1,7 @@
+{
+  "name": "Safi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
