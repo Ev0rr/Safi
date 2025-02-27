@@ -1,13 +1,18 @@
 ion-content {
-  --background: #eceeff; /* Color de fondo */
+  --background: #eeefff; /* Color de fondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 .logo-container {
+  width: 100%;
   margin-top: 20px;
 }
 
 .title {
+  color: black; 
   font-size: 22px;
   font-weight: bold;
   margin-top: 10px;
@@ -15,7 +20,7 @@ ion-content {
 
 .subtitle {
   font-size: 14px;
-  color: gray;
+  color: black;
   margin-bottom: 20px;
 }
 
@@ -57,16 +62,16 @@ ion-content {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  background: #dfe3ff;
+  background: #dcdeff;
   border-radius: 10px;
   text-align: center;
 }
 
 .done-button {
-  margin-top: 30px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  background: #4c6ef5;
-  border-radius: 10px;
+  color: white;
+  position: absolute;
+  bottom: 20px; /* Distancia desde la parte inferior */
+  left: 50%;
+  transform: translateX(-50%); /* Centra el botón horizontalmente */
+  width: 90%; /* Ajusta el ancho */
 }

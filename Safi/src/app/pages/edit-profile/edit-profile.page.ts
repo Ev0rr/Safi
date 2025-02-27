@@ -7,8 +7,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-edit-profile',
   standalone: true,
   templateUrl: './edit-profile.page.html',
-  styleUrls: ['./edit-profile.page.scss'],
-  imports: [IonicModule]  // 🔹 Importa IonicModule aquí
+  styleUrls: ['./edit-profile.page.scss'],// 🔹 Importa IonicModule aquí
   imports: [IonicModule, FormsModule]  // 🔹 Agrégalo aquí
 })
 export class EditProfilePage {
