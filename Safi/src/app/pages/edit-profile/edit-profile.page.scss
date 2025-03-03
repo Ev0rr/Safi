@@ -1,18 +1,33 @@
-ion-content {
-  --background: #eeefff; /* Color de fondo */
+.ion-padding {
+  --background: #eeefff;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  color: black;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
 }
 
 .logo-container {
-  width: 100%;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100;
+  height: 100%; /* Se define altura para mayor control */
+  margin: auto; /* Centra en caso de ser necesario */
 }
 
 .title {
-  color: black; 
+  color: black;
   font-size: 22px;
   font-weight: bold;
   margin-top: 10px;
@@ -48,7 +63,7 @@ ion-content {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: transparent;
+  background: red;
   border: none;
 }
 
