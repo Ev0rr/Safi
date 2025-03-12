@@ -1,28 +1,15 @@
 <ion-content class="ion-padding">
   <div class="container">
-    <!-- Logo superior -->
-    <div class="logo-container">
-      <ion-img src="assets/logo2.svg"></ion-img>
+    <img src="assets/logo2.svg" alt="Logo" class="logo" />
+    <input type="file" id="fileInput" hidden (change)="changeProfilePicture($event)" accept="image/*">
+    <h1>Edit your profile</h1>
+    <p class="subtitle">Add your profile photo and enter your name</p>
+    <div class="profile-image" (click)="openFilePicker()">
+      <img [src]="profileImage" class="avatar">
     </div>
-
-    <!-- Texto superior -->
-    <h2 class="title">Edit your profile</h2>
-    <p class="subtitle">Add your profile picture and enter your name</p>
-
-    <!-- Imagen de perfil con botón de edición -->
-    <div class="profile-container">
-      <div class="profile-image">
-        <ion-img [src]="profileImage" class="avatar"></ion-img>
-        <button class="edit-button" (click)="changeProfilePicture()">
-          <ion-icon name="add-circle"></ion-icon>
-        </button>
-      </div>
-    </div>
-
-    <!-- Input de nombre -->
-    <ion-input class="input-field" placeholder="Enter your name" [(ngModel)]="userName"></ion-input>
-
-    <!-- Botón Done -->
-    <ion-button expand="block" [disabled]="!userName" class="done-button" (click)="saveProfile()">Done</ion-button>
   </div>
+
+    <ion-input class="input-field"[(ngModel)]="userName" placeholder="Enter your name"></ion-input>
+
+  <ion-button expand="block" class="done-button" (click)="saveProfile()">Save</ion-button>
 </ion-content>

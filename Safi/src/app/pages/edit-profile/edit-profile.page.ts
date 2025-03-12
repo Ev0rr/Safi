@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { IonicModule } from '@ionic/angular';  // 🔹 Importa IonicModule
+import { IonicModule } from '@ionic/angular';  
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   templateUrl: './edit-profile.page.html',
   styleUrls: ['./edit-profile.page.scss'],
-  imports: [IonicModule, FormsModule]  // 🔹 Agrégalo aquí
+  imports: [IonicModule, FormsModule]
 })
 export class EditProfilePage {
   profileImage: string = 'assets/logo2.svg'; // Imagen de perfil por defecto
@@ -16,9 +16,20 @@ export class EditProfilePage {
 
   constructor(private navCtrl: NavController) {}
 
-  changeProfilePicture() {
-    // Aquí podrías abrir la galería o la cámara
-    console.log('Cambiar foto de perfil');
+  changeProfilePicture(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.profileImage = reader.result as string; // Convierte la imagen a base64
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  openFilePicker() {
+    const fileInput = document.getElementById('fileInput') as HTMLInputElement;
+    fileInput.click(); // Activa el input file oculto
   }
 
   saveProfile() {

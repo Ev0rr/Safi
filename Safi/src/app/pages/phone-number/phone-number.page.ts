@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-phone-number',
@@ -14,4 +15,10 @@ export class PhoneNumberPage {
   country: string = 'Mexico';
   countryCode: string = '+52';
   phoneNumber: string = '';
+  
+  constructor(private router: Router) {}
+
+  redirectToVerifyCode() {
+    this.router.navigate(['/verify-code']);
+  }
 }
