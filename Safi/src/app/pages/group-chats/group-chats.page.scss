@@ -1,0 +1,107 @@
+/* Fondo general */
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #EEEFFF; /* Fondo claro */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Elimina el fondo del encabezado */
+ion-header {
+  --background: #eeefff !important;
+  --ion-background-color: #eeefff !important;
+  background: #eeefff !important;
+  box-shadow: none !important;
+}
+
+/* Contenedor del encabezado */
+.custom-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center;
+  padding-top: 10px;
+  position: relative;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  background: transparent !important;
+  --background: transparent !important;
+  --ion-background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Título "Chats" alineado a la izquierda */
+.header-title {
+  align-self: flex-start; /* Alinea a la izquierda */
+  margin-left: 15px; /* Margen para separarlo del borde */
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  margin-top: -1.5rem;
+}
+
+/* Logo centrado */
+.custom-header img {
+  width: 8rem; /* Tamaño del logo */
+  height:  auto;
+  margin-top: 2rem;
+}
+
+/* Contenido */
+ion-content {
+  --background: #eeefff !important; /* Fondo blanco */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea todo el contenido al centro */
+  justify-content: flex-start;
+  padding: 0 10px; /* Ajuste de padding */
+}
+
+/* Barra de búsqueda */
+.search-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Barra de búsqueda personalizada */
+ion-searchbar {
+  --background: #DCDEFF; /* Fondo claro */
+  --border-radius: 10px; /* Bordes redondeados */
+  --placeholder-color: #757575; /* Color del placeholder */
+  --icon-color: #757575; /* Color del ícono */
+  width: 100%; /* Ancho de la barra */
+  max-width: 500px; /* Limita el ancho máximo para pantallas grandes */
+  color: #000;
+}
+
+ion-card {
+  width: 60%; /* Reduce el tamaño del card */
+  max-width: 280px; /* Define un ancho máximo */
+  height: auto; /* Ajusta la altura automáticamente */
+  padding: 10px; /* Espaciado interno */
+  margin: 10px 0; /* Centra el card */
+}
+
+ion-card img {
+  width: 100%; /* Hace que la imagen se ajuste al card */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+ion-card-title {
+  font-size: 16px; /* Reduce el tamaño del título */
+}
+
+.search-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea todo el contenido a la izquierda */
+  width: 100%;
+}
+
+
+
