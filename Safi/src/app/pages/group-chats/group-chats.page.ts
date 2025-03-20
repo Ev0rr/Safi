@@ -12,7 +12,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonSearchbar, IonCard, Ion
   templateUrl: './group-chats.page.html',
   styleUrls: ['./group-chats.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonSearchbar, CommonModule, FormsModule, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle]
+  imports: [IonContent, IonHeader,  IonSearchbar, CommonModule, FormsModule, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle]
 })
 export class GroupChatsPage implements OnInit {
 

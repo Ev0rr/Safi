@@ -1,0 +1,24 @@
+<ion-header>
+  <div class="custom-header">
+    <img src="assets/logo2.svg" alt="Logo" class="header-logo">
+    <h1 class="header-title">Chats</h1>
+  </div>
+</ion-header>
+
+<ion-content class="ion-padding" #content>
+  <div class="chat-container">
+    <div *ngFor="let msg of messages" class="message" [ngClass]="msg.type">
+      <p>{{ msg.text }}</p>
+      <span class="timestamp">{{ msg.timestamp }}</span>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="input-container">
+    <ion-input [(ngModel)]="newMessage" placeholder="Escribe un mensaje..." (keyup.enter)="sendMessage()"></ion-input>
+    <ion-button (click)="sendMessage()">
+      <ion-icon name="send"></ion-icon>
+    </ion-button>
+  </div>
+</ion-footer>
